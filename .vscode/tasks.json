@@ -24,7 +24,7 @@
         },
         {
             "label": "upload",
-            "command": "cargo clean --release",
+            "command": "avrdude -p m328p -c arduino -b 57600 -P COM5 -U flash:w:target/avr-unknown-gnu-atmega328/release/avr-blink.elf", // replace COM, also replace -b 115200 for new bootloader
             "type": "shell",
             "args": [],
             "problemMatcher": [
